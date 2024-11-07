@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="container"
+            maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="500.0"
+            prefWidth="700.0"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller"
+>
+   <children>
+      <AnchorPane fx:id="chessboard" layoutX="-1.0" layoutY="-1.0" maxHeight="500.0" maxWidth="500.0" onMouseClicked="#movement" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: black;" />
+      <Label contentDisplay="RIGHT" layoutX="562.0" layoutY="322.0" prefHeight="17.0" prefWidth="59.0" style="-fx-alignment: center;" text="Turn" textAlignment="CENTER" textFill="#170101">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="turn" layoutX="548.0" layoutY="369.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: white; -fx-alignment: center;" text="BLUE" textFill="#4725bf">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="522.0" layoutY="245.0" prefHeight="55.0" prefWidth="139.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="#f50e0e" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="blueScore" layoutX="507.0" layoutY="14.0" prefHeight="27.0" prefWidth="76.0" text="Blue: 0" textFill="#340bc6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="RedScore" layoutX="602.0" layoutY="14.0" prefHeight="27.0" prefWidth="87.0" text="Red: 0" textFill="#ee0a0a">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="makeMine" layoutX="510.0" layoutY="102.0" mnemonicParsing="false" onAction="#makeMine" text="Mine" />
+      <Button fx:id="makeWall" layoutX="628.0" layoutY="102.0" mnemonicParsing="false" onAction="#makeWall" prefHeight="25.0" prefWidth="46.0" text="Wall" />
+      <Button fx:id="makeStar" layoutX="569.0" layoutY="102.0" mnemonicParsing="false" onAction="#makeStar" prefHeight="25.0" prefWidth="46.0" text="Star" />
+      <Button fx:id="restart" layoutX="510.0" layoutY="176.0" mnemonicParsing="false" onAction="#restartGame" prefHeight="25.0" prefWidth="163.0" text="Restart" />
+      <Button fx:id="generateRandomElement" layoutX="511.0" layoutY="138.0" mnemonicParsing="false" onAction="#putRandomElementOnScreen" prefHeight="25.0" prefWidth="163.0" text="Generate Random" />
+      <Button fx:id="startBtn" disable="true" layoutX="509.0" layoutY="211.0" mnemonicParsing="false" onAction="#start" prefHeight="25.0" prefWidth="163.0" text="Start" />
+      <Label fx:id="winnerLabel" layoutX="511.0" layoutY="51.0" prefHeight="36.0" prefWidth="163.0" style="-fx-alignment: center;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
